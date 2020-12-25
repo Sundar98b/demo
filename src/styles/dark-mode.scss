@@ -1,0 +1,34 @@
+
+
+$popups: #12192d;
+
+body {
+  background: #000000 !important;
+  .content-card {
+    background: #171e32 !important;
+  }
+  .topbar {
+    background: #12192d;
+    .ant-menu {
+      background: #12192d;
+      color: #838383;
+    }
+    .ant-menu-horizontal > .ant-menu-item > a {
+      color: #838383;
+    }
+    .ant-menu-item-selected a {
+      color: #c087ff !important;
+    }
+    .ant-menu-submenu-selected,
+    .ant-menu-item-selected {
+      color: #c087ff !important;
+    }
+    .ant-menu-item-selected::after {
+      border-color: #c087ff !important;
+    }
+    
+  }
+  .ant-drawer-content {
+    background: $popups ;
+  }
+}

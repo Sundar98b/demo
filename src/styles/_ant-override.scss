@@ -1,0 +1,215 @@
+@import "./mixin";
+@import "./variables";
+
+/*
+What ever, if you override the ant styles globaly that should be only in this file.
+*/
+.ant-menu-horizontal,
+.ant-menu-horizontal > .ant-menu-item:hover,
+.ant-menu-horizontal > .ant-menu-submenu:hover,
+.ant-menu-horizontal > .ant-menu-item-active,
+.ant-menu-horizontal > .ant-menu-submenu-active,
+.ant-menu-horizontal > .ant-menu-item-open,
+.ant-menu-horizontal > .ant-menu-submenu-open,
+.ant-menu-horizontal > .ant-menu-item-selected,
+.ant-menu-horizontal > .ant-menu-submenu-selected {
+  line-height: 31px;
+  border-bottom: none !important;
+}
+
+.ant-menu-horizontal > .ant-menu-item,
+.ant-menu-horizontal > .ant-menu-submenu {
+  border-bottom: none !important;
+}
+
+.ant-menu-horizontal > .ant-menu-submenu-selected {
+  border-bottom: none !important;
+  &::after {
+    content: "";
+    border-bottom: 2px solid $primary;
+    position: absolute;
+    top: 36px;
+    width: 100%;
+  }
+}
+.ant-menu-submenu-selected,
+.ant-menu-item-selected {
+  color: $primary !important;
+}
+.ant-menu-item-selected {
+  a {
+    color: $primary;
+  }
+  &::after {
+    content: "";
+    border-bottom: 2px solid #381460;
+    position: absolute;
+    top: 36px;
+    width: 84%;
+    left: 8px;
+  }
+  @include respond-below(sm) {
+    &::after {
+      content: "";
+      display: none;
+    }
+  }
+}
+.ant-layout.ant-layout-has-sider {
+  height: 100vh;
+}
+
+@include respond-below(sm) {
+  .ant-layout-sider {
+    position: absolute;
+    height: 100vh;
+  }
+  .ant-layout-sider-zero-width-trigger {
+    top: 12px;
+    right: -50px;
+    border-radius: 2px;
+  }
+  .ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper {
+    width: 100% !important;
+  }
+}
+
+/* Override the sidebar color*/
+.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub,
+.ant-layout-sider {
+  background: $sidebar-bg;
+}
+
+.ant-btn-primary {
+  color: #fff;
+  background-color: $btn-primary;
+  border-color: $btn-primary;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  color: #fff;
+  background-color: lighten($btn-primary, 0.5);
+  border-color: lighten($btn-primary, 0.5);
+}
+
+.submenu-title-wrapper a {
+  color: rgba(0, 0, 0, 0);
+}
+
+.zp-popover {
+  .ant-popover-inner-content {
+    padding: 0;
+    height: 300px;
+    width: 284px;
+    .ant-tabs-nav-container {
+      font-size: 12px;
+    }
+    .ant-tabs-nav-wrap {
+      padding: 0 14px;
+    }
+    .ant-tabs-tabpane {
+      padding: 5px;
+    }
+    .ant-tabs-content {
+      margin-top: -18px;
+    }
+  }
+}
+
+.ant-form-item {
+  margin-bottom: 2px;
+}
+.ant-form-vertical .ant-form-item-label {
+  padding-bottom: 2px;
+}
+
+.ant-btn:not(.ant-btn-link) {
+  border: none;
+  white-space: nowrap;
+  display: inline-block;
+  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+    0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+.ant-btn-round {
+  height: 32px;
+  padding: 4px 16px;
+  font-size: 14px;
+  border-radius: 32px !important;
+}
+
+.div-table {
+  display: table;
+  width: auto;
+  background-color: #eee;
+  border: 1px solid #666666;
+  border-spacing: 5px; /* cellspacing:poor IE support for  this */
+}
+.div-table-row {
+  display: table-row;
+  width: auto;
+  clear: both;
+}
+.div-table-col {
+  float: left; /* fix for  buggy browsers */
+  display: table-column;
+  width: 200px;
+  background-color: #ccc;
+}
+
+.ant-select-loading .ant-select-selection-item {
+  color: transparent;
+  &::before {
+    content: "loading...";
+    width: 100px;
+    color: #565050;
+  }
+}
+.ant-drawer {
+  z-index: 1001;
+}
+.ant-drawer-body {
+  padding-bottom: 75px;
+}
+
+.ant-form-item-label > label {
+  font-weight: bold;
+}
+
+.ant-tabs.ant-tabs-card .ant-tabs-card-content > .ant-tabs-tabpane,
+.ant-tabs.ant-tabs-editable-card .ant-tabs-card-content > .ant-tabs-tabpane {
+  -webkit-transition: none !important;
+  transition: none !important;
+  padding: 12px;
+}
+
+.ant-tabs div {
+  outline: none;
+}
+
+.ant-menu-horizontal > .ant-menu-item > span > span a {
+  color: rgba(0, 0, 0, 0);
+}
+.modal-obj {
+  z-index: 1001;
+}
+
+.site-result-demo-error-icon {
+  color: red;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  @include respond-below(sm) {
+    margin-left: -11px;
+    width: 112%;
+  }
+}

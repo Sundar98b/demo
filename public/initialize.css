@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Muli", sans-serif;
+  letter-spacing: 0.39px;
+  background: #ffffff; 
+  /* need to change */
+}
+.topbar {
+  background: rgb(255, 255, 255);
+  height: 47px;
+  line-height: 2.4;
+  margin: 0;
+  padding: 8px 10px;
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+.logo-loader,
+.menu-item {
+  position: relative;
+  width: 12.5%;
+  height: 100%;
+  float: left;
+  margin-left: 7px;
+}
+
+.menu-items {
+  width: 70%;
+  height: 100%;
+  float: right;
+}
+.menu-item {
+  float: right;
+}
+
+.ldr {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background-image: linear-gradient(
+    90deg,
+    #f4f4f4 0px,
+    rgba(229, 229, 229, 0.8) 40px,
+    #f4f4f4 80px
+  );
+  background-size: 600px;
+  animation: shine-lines 2s infinite ease-out;
+}
+
+.sidebar {
+  width: 81px;
+  height: 100vh;
+  padding-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar .icons {
+  height: 70px;
+  width: 70px;
+  margin: 3px;
+  margin-top: 23px;
+  border-radius: 16px;
+  border: 1px solid #dedede;
+  /* box-shadow: 1px 0px 1px #ddd, 0 10px 20px #ccc; */
+}
+
+.main-ldr {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-ldr svg {
+  transform: scale(0.4);
+}
+
+.logo-base {
+  fill: grey;
+}
+.logo-animate {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 1s infinite;
+}
+.logo-box {
+  overflow: hidden;
+}
+
+@keyframes dash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "name": "di-ui",
+  "version": "1.0.6",
+  "private": true,
+  "proxy": "http://localhost:9090",
+  "dependencies": {
+    "@ant-design/icons": "^4.0.6",
+    "@antv/g2plot": "^1.1.6",
+    "@opd/g2plot-react": "^1.5.2",
+    "antd": "^4.0.2",
+    "axios": "^0.19.2",
+    "chart.js": "^2.9.3",
+    "emoji-picker-react": "^3.2.1",
+    "faker": "^4.1.0",
+    "fast-sort": "^2.1.1",
+    "file-saver": "^2.0.5",
+    "fuse.js": "^5.0.7-beta",
+    "lodash-es": "^4.17.15",
+    "react": "^16.13.0",
+    "react-chartjs-2": "^2.9.0",
+    "react-circular-progressbar": "^2.0.3",
+    "react-dom": "^16.13.0",
+    "react-error-boundary": "^1.2.5",
+    "react-google-charts": "^3.0.15",
+    "react-lazy-load-image-component": "^1.4.1",
+    "react-organizational-chart": "^1.0.2",
+    "react-orgchart": "^1.0.5",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "socket.io-client": "^2.3.0",
+    "styled-components": "^5.0.1",
+    "use-debounce": "^3.4.3",
+    "use-media": "^1.4.0",
+    "use-mobile-detect-hook": "^1.0.3",
+    "uuid": "^7.0.2"
+  },
+  "scripts": {
+    "start": "cross-env REACT_APP_MODE=dev react-scripts start",
+    "build": "cross-env REACT_APP_MODE=prod react-scripts build",
+    "build:dev": "cross-env REACT_APP_MODE=dev  react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "prettier  --write 'src/**/*.{ts,tsx,json,css}'",
+    "lint": "eslint 'src/**/*{.ts,.tsx}'  --fix ",
+    "git:conflicts": "git diff --name-only --diff-filter=U",
+    "lt": "lt --port 9090",
+    "sort:imports": "import-sort --write './src/**/*.tsx'"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/faker": "^4.1.11",
+    "@types/file-saver": "^2.0.1",
+    "@types/lodash-es": "^4.17.3",
+    "@types/node": "^12.12.29",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-lazy-load-image-component": "^1.3.0",
+    "@types/react-redux": "^7.1.7",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/react-sticky": "^6.0.3",
+    "@types/socket.io-client": "^1.4.32",
+    "@types/styled-components": "^5.0.1",
+    "@types/use-resize-observer": "^6.0.0",
+    "@types/uuid": "^7.0.2",
+    "@welldone-software/why-did-you-render": "^4.0.5",
+    "cross-env": "^7.0.2",
+    "husky": "^4.2.3",
+    "import-sort-cli": "^6.0.0",
+    "import-sort-style-renke": "^6.0.0",
+    "kill-port": "^1.6.0",
+    "lint-staged": "^10.2.11",
+    "localtunnel": "^2.0.0",
+    "node-sass": "^4.14.1",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "typescript": "^3.7.5"
+  },
+  "prettier": {
+    "trailingComma": "all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "importSort": {
+    ".js, .jsx, .ts, .tsx": {
+      "style": "renke"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "import-sort --write",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ],
+    "*.hbs": [
+      "prettier --write"
+    ]
+  }
+}
